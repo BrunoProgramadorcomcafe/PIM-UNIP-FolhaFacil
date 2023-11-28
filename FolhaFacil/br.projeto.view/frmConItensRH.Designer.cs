@@ -35,11 +35,10 @@
             txtPesqAcresc = new TextBox();
             label18 = new Label();
             dataGridView1 = new DataGridView();
-            idAcresc = new DataGridViewTextBoxColumn();
-            DESCAcresc = new DataGridViewTextBoxColumn();
-            VALORAcresc = new DataGridViewTextBoxColumn();
+            txtValorAcresc = new TextBox();
             txtDescAcresc = new TextBox();
             txtIDAcres = new TextBox();
+            label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label1 = new Label();
@@ -50,9 +49,6 @@
             txtPesqDesc = new TextBox();
             label9 = new Label();
             dataGridView2 = new DataGridView();
-            IDDesc = new DataGridViewTextBoxColumn();
-            DESCDesc = new DataGridViewTextBoxColumn();
-            VALORDesc = new DataGridViewTextBoxColumn();
             label8 = new Label();
             txtValorDesc = new TextBox();
             label7 = new Label();
@@ -63,8 +59,12 @@
             btnLimparDesc = new Button();
             btnExcluirDesc = new Button();
             btnAlterarDesc = new Button();
-            label3 = new Label();
-            txtValorAcresc = new TextBox();
+            idAcresc = new DataGridViewTextBoxColumn();
+            DESCAcresc = new DataGridViewTextBoxColumn();
+            VALORAcresc = new DataGridViewTextBoxColumn();
+            IDDesc = new DataGridViewTextBoxColumn();
+            DESCDesc = new DataGridViewTextBoxColumn();
+            VALORDesc = new DataGridViewTextBoxColumn();
             statusStrip1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -127,6 +127,7 @@
             txtPesqAcresc.Name = "txtPesqAcresc";
             txtPesqAcresc.Size = new Size(356, 27);
             txtPesqAcresc.TabIndex = 53;
+            txtPesqAcresc.TextChanged += txtPesqAcresc_TextChanged;
             // 
             // label18
             // 
@@ -150,24 +151,14 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(344, 168);
             dataGridView1.TabIndex = 51;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
-            // idAcresc
+            // txtValorAcresc
             // 
-            idAcresc.HeaderText = "ID";
-            idAcresc.Name = "idAcresc";
-            idAcresc.ReadOnly = true;
-            // 
-            // DESCAcresc
-            // 
-            DESCAcresc.HeaderText = "Descrição";
-            DESCAcresc.Name = "DESCAcresc";
-            DESCAcresc.ReadOnly = true;
-            // 
-            // VALORAcresc
-            // 
-            VALORAcresc.HeaderText = "Valor";
-            VALORAcresc.Name = "VALORAcresc";
-            VALORAcresc.ReadOnly = true;
+            txtValorAcresc.Location = new Point(201, 426);
+            txtValorAcresc.Name = "txtValorAcresc";
+            txtValorAcresc.Size = new Size(100, 27);
+            txtValorAcresc.TabIndex = 50;
             // 
             // txtDescAcresc
             // 
@@ -183,6 +174,15 @@
             txtIDAcres.ReadOnly = true;
             txtIDAcres.Size = new Size(100, 27);
             txtIDAcres.TabIndex = 48;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(141, 432);
+            label3.Name = "label3";
+            label3.Size = new Size(54, 21);
+            label3.TabIndex = 47;
+            label3.Text = "Valor:";
             // 
             // label4
             // 
@@ -221,6 +221,7 @@
             btnLimparAcresc.TabIndex = 43;
             btnLimparAcresc.Text = "Limpar";
             btnLimparAcresc.UseVisualStyleBackColor = false;
+            btnLimparAcresc.Click += btnLimparAcresc_Click;
             // 
             // btnExcluirAcresc
             // 
@@ -231,6 +232,7 @@
             btnExcluirAcresc.TabIndex = 42;
             btnExcluirAcresc.Text = "Excluir";
             btnExcluirAcresc.UseVisualStyleBackColor = false;
+            btnExcluirAcresc.Click += btnExcluirAcresc_Click;
             // 
             // btnAlterarAcres
             // 
@@ -241,6 +243,7 @@
             btnAlterarAcres.TabIndex = 41;
             btnAlterarAcres.Text = "Alterar";
             btnAlterarAcres.UseVisualStyleBackColor = false;
+            btnAlterarAcres.Click += btnAlterarAcres_Click;
             // 
             // panel2
             // 
@@ -271,6 +274,7 @@
             txtPesqDesc.Name = "txtPesqDesc";
             txtPesqDesc.Size = new Size(356, 27);
             txtPesqDesc.TabIndex = 55;
+            txtPesqDesc.TextChanged += txtPesqDesc_TextChanged;
             // 
             // label9
             // 
@@ -294,24 +298,7 @@
             dataGridView2.RowTemplate.Height = 25;
             dataGridView2.Size = new Size(344, 168);
             dataGridView2.TabIndex = 53;
-            // 
-            // IDDesc
-            // 
-            IDDesc.HeaderText = "ID";
-            IDDesc.Name = "IDDesc";
-            IDDesc.ReadOnly = true;
-            // 
-            // DESCDesc
-            // 
-            DESCDesc.HeaderText = "Descrição";
-            DESCDesc.Name = "DESCDesc";
-            DESCDesc.ReadOnly = true;
-            // 
-            // VALORDesc
-            // 
-            VALORDesc.HeaderText = "Valor";
-            VALORDesc.Name = "VALORDesc";
-            VALORDesc.ReadOnly = true;
+            dataGridView2.CellClick += dataGridView2_CellClick;
             // 
             // label8
             // 
@@ -381,6 +368,7 @@
             btnLimparDesc.TabIndex = 46;
             btnLimparDesc.Text = "Limpar";
             btnLimparDesc.UseVisualStyleBackColor = false;
+            btnLimparDesc.Click += btnLimparDesc_Click;
             // 
             // btnExcluirDesc
             // 
@@ -391,6 +379,7 @@
             btnExcluirDesc.TabIndex = 45;
             btnExcluirDesc.Text = "Excluir";
             btnExcluirDesc.UseVisualStyleBackColor = false;
+            btnExcluirDesc.Click += btnExcluirDesc_Click;
             // 
             // btnAlterarDesc
             // 
@@ -401,22 +390,49 @@
             btnAlterarDesc.TabIndex = 44;
             btnAlterarDesc.Text = "Alterar";
             btnAlterarDesc.UseVisualStyleBackColor = false;
+            btnAlterarDesc.Click += btnAlterarDesc_Click;
             // 
-            // label3
+            // idAcresc
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(141, 432);
-            label3.Name = "label3";
-            label3.Size = new Size(54, 21);
-            label3.TabIndex = 47;
-            label3.Text = "Valor:";
+            idAcresc.DataPropertyName = "Id1";
+            idAcresc.HeaderText = "ID";
+            idAcresc.Name = "idAcresc";
+            idAcresc.ReadOnly = true;
             // 
-            // txtValorAcresc
+            // DESCAcresc
             // 
-            txtValorAcresc.Location = new Point(201, 426);
-            txtValorAcresc.Name = "txtValorAcresc";
-            txtValorAcresc.Size = new Size(100, 27);
-            txtValorAcresc.TabIndex = 50;
+            DESCAcresc.DataPropertyName = "Descricao";
+            DESCAcresc.HeaderText = "Descrição";
+            DESCAcresc.Name = "DESCAcresc";
+            DESCAcresc.ReadOnly = true;
+            // 
+            // VALORAcresc
+            // 
+            VALORAcresc.DataPropertyName = "Valor";
+            VALORAcresc.HeaderText = "Valor";
+            VALORAcresc.Name = "VALORAcresc";
+            VALORAcresc.ReadOnly = true;
+            // 
+            // IDDesc
+            // 
+            IDDesc.DataPropertyName = "Id1";
+            IDDesc.HeaderText = "ID";
+            IDDesc.Name = "IDDesc";
+            IDDesc.ReadOnly = true;
+            // 
+            // DESCDesc
+            // 
+            DESCDesc.DataPropertyName = "Descricao";
+            DESCDesc.HeaderText = "Descrição";
+            DESCDesc.Name = "DESCDesc";
+            DESCDesc.ReadOnly = true;
+            // 
+            // VALORDesc
+            // 
+            VALORDesc.DataPropertyName = "Valor";
+            VALORDesc.HeaderText = "Valor";
+            VALORDesc.Name = "VALORDesc";
+            VALORDesc.ReadOnly = true;
             // 
             // frmConItensRH
             // 
@@ -469,18 +485,18 @@
         private Label label6;
         private TextBox txtIDDesc;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn idAcresc;
-        private DataGridViewTextBoxColumn DESCAcresc;
-        private DataGridViewTextBoxColumn VALORAcresc;
         private TextBox txtPesqAcresc;
         private Label label18;
         private TextBox txtPesqDesc;
         private Label label9;
         private DataGridView dataGridView2;
+        private TextBox txtValorAcresc;
+        private Label label3;
+        private DataGridViewTextBoxColumn idAcresc;
+        private DataGridViewTextBoxColumn DESCAcresc;
+        private DataGridViewTextBoxColumn VALORAcresc;
         private DataGridViewTextBoxColumn IDDesc;
         private DataGridViewTextBoxColumn DESCDesc;
         private DataGridViewTextBoxColumn VALORDesc;
-        private TextBox txtValorAcresc;
-        private Label label3;
     }
 }

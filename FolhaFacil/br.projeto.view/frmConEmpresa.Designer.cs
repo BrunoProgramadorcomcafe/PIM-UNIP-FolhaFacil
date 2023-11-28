@@ -36,11 +36,11 @@
             btnLimpar = new Button();
             btnExcluir = new Button();
             btnAlterar = new Button();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtID = new TextBox();
+            txtTel = new TextBox();
+            txtEnd = new TextBox();
+            txtCNPJ = new TextBox();
+            txtNome = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -95,11 +95,11 @@
             panel1.Controls.Add(btnLimpar);
             panel1.Controls.Add(btnExcluir);
             panel1.Controls.Add(btnAlterar);
-            panel1.Controls.Add(textBox5);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtID);
+            panel1.Controls.Add(txtTel);
+            panel1.Controls.Add(txtEnd);
+            panel1.Controls.Add(txtCNPJ);
+            panel1.Controls.Add(txtNome);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
@@ -120,6 +120,7 @@
             btnLimpar.TabIndex = 43;
             btnLimpar.Text = "Limpar";
             btnLimpar.UseVisualStyleBackColor = false;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // btnExcluir
             // 
@@ -130,6 +131,7 @@
             btnExcluir.TabIndex = 42;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnAlterar
             // 
@@ -140,42 +142,43 @@
             btnAlterar.TabIndex = 41;
             btnAlterar.Text = "Alterar";
             btnAlterar.UseVisualStyleBackColor = false;
+            btnAlterar.Click += btnAlterar_Click;
             // 
-            // textBox5
+            // txtID
             // 
-            textBox5.Location = new Point(192, 173);
-            textBox5.Name = "textBox5";
-            textBox5.ReadOnly = true;
-            textBox5.Size = new Size(149, 27);
-            textBox5.TabIndex = 11;
+            txtID.Location = new Point(192, 173);
+            txtID.Name = "txtID";
+            txtID.ReadOnly = true;
+            txtID.Size = new Size(149, 27);
+            txtID.TabIndex = 11;
             // 
-            // textBox4
+            // txtTel
             // 
-            textBox4.Location = new Point(192, 305);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(300, 27);
-            textBox4.TabIndex = 10;
+            txtTel.Location = new Point(192, 305);
+            txtTel.Name = "txtTel";
+            txtTel.Size = new Size(300, 27);
+            txtTel.TabIndex = 10;
             // 
-            // textBox3
+            // txtEnd
             // 
-            textBox3.Location = new Point(192, 272);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(300, 27);
-            textBox3.TabIndex = 9;
+            txtEnd.Location = new Point(192, 272);
+            txtEnd.Name = "txtEnd";
+            txtEnd.Size = new Size(300, 27);
+            txtEnd.TabIndex = 9;
             // 
-            // textBox2
+            // txtCNPJ
             // 
-            textBox2.Location = new Point(192, 239);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(300, 27);
-            textBox2.TabIndex = 8;
+            txtCNPJ.Location = new Point(192, 239);
+            txtCNPJ.Name = "txtCNPJ";
+            txtCNPJ.Size = new Size(300, 27);
+            txtCNPJ.TabIndex = 8;
             // 
-            // textBox1
+            // txtNome
             // 
-            textBox1.Location = new Point(192, 206);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 27);
-            textBox1.TabIndex = 7;
+            txtNome.Location = new Point(192, 206);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(300, 27);
+            txtNome.TabIndex = 7;
             // 
             // label6
             // 
@@ -252,6 +255,7 @@
             txtPesqNome.Name = "txtPesqNome";
             txtPesqNome.Size = new Size(356, 27);
             txtPesqNome.TabIndex = 44;
+            txtPesqNome.TextChanged += txtPesqNome_TextChanged;
             // 
             // label18
             // 
@@ -285,33 +289,39 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(516, 383);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // id
             // 
+            id.DataPropertyName = "Id1";
             id.HeaderText = "ID";
             id.Name = "id";
             id.ReadOnly = true;
             // 
             // NOME
             // 
+            NOME.DataPropertyName = "Nome";
             NOME.HeaderText = "Nome";
             NOME.Name = "NOME";
             NOME.ReadOnly = true;
             // 
             // cnpj
             // 
+            cnpj.DataPropertyName = "CNPJ";
             cnpj.HeaderText = "CNPJ";
             cnpj.Name = "cnpj";
             cnpj.ReadOnly = true;
             // 
             // ENDERECO
             // 
+            ENDERECO.DataPropertyName = "Endereco";
             ENDERECO.HeaderText = "Endereço";
             ENDERECO.Name = "ENDERECO";
             ENDERECO.ReadOnly = true;
             // 
             // TEL
             // 
+            TEL.DataPropertyName = "Tel";
             TEL.HeaderText = "Telefone";
             TEL.Name = "TEL";
             TEL.ReadOnly = true;
@@ -356,11 +366,11 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox txtNome;
+        private TextBox txtID;
+        private TextBox txtTel;
+        private TextBox txtEnd;
+        private TextBox txtCNPJ;
         private Button btnLimpar;
         private Button btnExcluir;
         private Button btnAlterar;

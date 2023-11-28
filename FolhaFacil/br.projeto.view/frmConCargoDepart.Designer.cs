@@ -32,11 +32,14 @@
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             lblLogado = new ToolStripStatusLabel();
             panel1 = new Panel();
+            btnAlterarCargo = new Button();
+            txtDescCargo = new TextBox();
+            btnExcluirCargo = new Button();
+            btnLimparCargo = new Button();
+            txtIDCargo = new TextBox();
             txtPesqCargo = new TextBox();
             label18 = new Label();
             dataGridView1 = new DataGridView();
-            IDCargo = new DataGridViewTextBoxColumn();
-            DESCCargo = new DataGridViewTextBoxColumn();
             label4 = new Label();
             label5 = new Label();
             label1 = new Label();
@@ -44,21 +47,18 @@
             txtPesqDepart = new TextBox();
             label7 = new Label();
             dataGridView2 = new DataGridView();
-            IDDepart = new DataGridViewTextBoxColumn();
-            DESCDepart = new DataGridViewTextBoxColumn();
             txtDescDepart = new TextBox();
             label6 = new Label();
             txtIDDepart = new TextBox();
-            button3 = new Button();
+            btnAlterarDep = new Button();
             label2 = new Label();
-            button2 = new Button();
+            btnExcluirDep = new Button();
             label3 = new Label();
-            button1 = new Button();
-            txtDescCargo = new TextBox();
-            txtIDCargo = new TextBox();
-            btnAlterarCargo = new Button();
-            btnExcluirCargo = new Button();
-            btnLimparCargo = new Button();
+            btnLimparDep = new Button();
+            IDCargo = new DataGridViewTextBoxColumn();
+            DESCCargo = new DataGridViewTextBoxColumn();
+            IDDepart = new DataGridViewTextBoxColumn();
+            DESCDepart = new DataGridViewTextBoxColumn();
             statusStrip1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -111,6 +111,54 @@
             panel1.TabIndex = 8;
             panel1.Paint += panel1_Paint;
             // 
+            // btnAlterarCargo
+            // 
+            btnAlterarCargo.BackColor = Color.MediumTurquoise;
+            btnAlterarCargo.Location = new Point(96, 466);
+            btnAlterarCargo.Name = "btnAlterarCargo";
+            btnAlterarCargo.Size = new Size(75, 31);
+            btnAlterarCargo.TabIndex = 67;
+            btnAlterarCargo.Text = "Alterar";
+            btnAlterarCargo.UseVisualStyleBackColor = false;
+            btnAlterarCargo.Click += btnAlterarCargo_Click;
+            // 
+            // txtDescCargo
+            // 
+            txtDescCargo.Location = new Point(215, 417);
+            txtDescCargo.Name = "txtDescCargo";
+            txtDescCargo.Size = new Size(224, 27);
+            txtDescCargo.TabIndex = 68;
+            // 
+            // btnExcluirCargo
+            // 
+            btnExcluirCargo.BackColor = Color.MediumTurquoise;
+            btnExcluirCargo.Location = new Point(258, 466);
+            btnExcluirCargo.Name = "btnExcluirCargo";
+            btnExcluirCargo.Size = new Size(75, 31);
+            btnExcluirCargo.TabIndex = 68;
+            btnExcluirCargo.Text = "Excluir";
+            btnExcluirCargo.UseVisualStyleBackColor = false;
+            btnExcluirCargo.Click += btnExcluirCargo_Click;
+            // 
+            // btnLimparCargo
+            // 
+            btnLimparCargo.BackColor = Color.MediumTurquoise;
+            btnLimparCargo.Location = new Point(403, 466);
+            btnLimparCargo.Name = "btnLimparCargo";
+            btnLimparCargo.Size = new Size(75, 31);
+            btnLimparCargo.TabIndex = 69;
+            btnLimparCargo.Text = "Limpar";
+            btnLimparCargo.UseVisualStyleBackColor = false;
+            btnLimparCargo.Click += btnLimparCargo_Click;
+            // 
+            // txtIDCargo
+            // 
+            txtIDCargo.Location = new Point(215, 376);
+            txtIDCargo.Name = "txtIDCargo";
+            txtIDCargo.ReadOnly = true;
+            txtIDCargo.Size = new Size(100, 27);
+            txtIDCargo.TabIndex = 67;
+            // 
             // txtPesqCargo
             // 
             txtPesqCargo.Cursor = Cursors.IBeam;
@@ -119,6 +167,7 @@
             txtPesqCargo.Name = "txtPesqCargo";
             txtPesqCargo.Size = new Size(356, 27);
             txtPesqCargo.TabIndex = 61;
+            txtPesqCargo.TextChanged += txtPesqCargo_TextChanged;
             // 
             // label18
             // 
@@ -142,18 +191,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(243, 150);
             dataGridView1.TabIndex = 59;
-            // 
-            // IDCargo
-            // 
-            IDCargo.HeaderText = "ID";
-            IDCargo.Name = "IDCargo";
-            IDCargo.ReadOnly = true;
-            // 
-            // DESCCargo
-            // 
-            DESCCargo.HeaderText = "Descrição";
-            DESCCargo.Name = "DESCCargo";
-            DESCCargo.ReadOnly = true;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // label4
             // 
@@ -192,11 +230,11 @@
             panel2.Controls.Add(txtDescDepart);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(txtIDDepart);
-            panel2.Controls.Add(button3);
+            panel2.Controls.Add(btnAlterarDep);
             panel2.Controls.Add(label2);
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(btnExcluirDep);
             panel2.Controls.Add(label3);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btnLimparDep);
             panel2.Location = new Point(570, 12);
             panel2.Name = "panel2";
             panel2.Size = new Size(555, 516);
@@ -210,6 +248,7 @@
             txtPesqDepart.Name = "txtPesqDepart";
             txtPesqDepart.Size = new Size(356, 27);
             txtPesqDepart.TabIndex = 63;
+            txtPesqDepart.TextChanged += txtPesqDepart_TextChanged;
             // 
             // label7
             // 
@@ -233,18 +272,7 @@
             dataGridView2.RowTemplate.Height = 25;
             dataGridView2.Size = new Size(243, 150);
             dataGridView2.TabIndex = 60;
-            // 
-            // IDDepart
-            // 
-            IDDepart.HeaderText = "ID";
-            IDDepart.Name = "IDDepart";
-            IDDepart.ReadOnly = true;
-            // 
-            // DESCDepart
-            // 
-            DESCDepart.HeaderText = "Descrição";
-            DESCDepart.Name = "DESCDepart";
-            DESCDepart.ReadOnly = true;
+            dataGridView2.CellClick += dataGridView2_CellClick;
             // 
             // txtDescDepart
             // 
@@ -271,15 +299,16 @@
             txtIDDepart.Size = new Size(100, 27);
             txtIDDepart.TabIndex = 65;
             // 
-            // button3
+            // btnAlterarDep
             // 
-            button3.BackColor = Color.MediumTurquoise;
-            button3.Location = new Point(83, 466);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 31);
-            button3.TabIndex = 60;
-            button3.Text = "Alterar";
-            button3.UseVisualStyleBackColor = false;
+            btnAlterarDep.BackColor = Color.MediumTurquoise;
+            btnAlterarDep.Location = new Point(83, 466);
+            btnAlterarDep.Name = "btnAlterarDep";
+            btnAlterarDep.Size = new Size(75, 31);
+            btnAlterarDep.TabIndex = 60;
+            btnAlterarDep.Text = "Alterar";
+            btnAlterarDep.UseVisualStyleBackColor = false;
+            btnAlterarDep.Click += btnAlterarDep_Click;
             // 
             // label2
             // 
@@ -290,15 +319,16 @@
             label2.TabIndex = 64;
             label2.Text = "Descrição:";
             // 
-            // button2
+            // btnExcluirDep
             // 
-            button2.BackColor = Color.MediumTurquoise;
-            button2.Location = new Point(245, 466);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 31);
-            button2.TabIndex = 61;
-            button2.Text = "Excluir";
-            button2.UseVisualStyleBackColor = false;
+            btnExcluirDep.BackColor = Color.MediumTurquoise;
+            btnExcluirDep.Location = new Point(245, 466);
+            btnExcluirDep.Name = "btnExcluirDep";
+            btnExcluirDep.Size = new Size(75, 31);
+            btnExcluirDep.TabIndex = 61;
+            btnExcluirDep.Text = "Excluir";
+            btnExcluirDep.UseVisualStyleBackColor = false;
+            btnExcluirDep.Click += btnExcluirDep_Click;
             // 
             // label3
             // 
@@ -309,60 +339,44 @@
             label3.TabIndex = 63;
             label3.Text = "ID:";
             // 
-            // button1
+            // btnLimparDep
             // 
-            button1.BackColor = Color.MediumTurquoise;
-            button1.Location = new Point(390, 466);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 31);
-            button1.TabIndex = 62;
-            button1.Text = "Limpar";
-            button1.UseVisualStyleBackColor = false;
+            btnLimparDep.BackColor = Color.MediumTurquoise;
+            btnLimparDep.Location = new Point(390, 466);
+            btnLimparDep.Name = "btnLimparDep";
+            btnLimparDep.Size = new Size(75, 31);
+            btnLimparDep.TabIndex = 62;
+            btnLimparDep.Text = "Limpar";
+            btnLimparDep.UseVisualStyleBackColor = false;
+            btnLimparDep.Click += btnLimparDep_Click;
             // 
-            // txtDescCargo
+            // IDCargo
             // 
-            txtDescCargo.Location = new Point(215, 417);
-            txtDescCargo.Name = "txtDescCargo";
-            txtDescCargo.Size = new Size(224, 27);
-            txtDescCargo.TabIndex = 68;
+            IDCargo.DataPropertyName = "Id1";
+            IDCargo.HeaderText = "ID";
+            IDCargo.Name = "IDCargo";
+            IDCargo.ReadOnly = true;
             // 
-            // txtIDCargo
+            // DESCCargo
             // 
-            txtIDCargo.Location = new Point(215, 376);
-            txtIDCargo.Name = "txtIDCargo";
-            txtIDCargo.ReadOnly = true;
-            txtIDCargo.Size = new Size(100, 27);
-            txtIDCargo.TabIndex = 67;
+            DESCCargo.DataPropertyName = "Descricao";
+            DESCCargo.HeaderText = "Descrição";
+            DESCCargo.Name = "DESCCargo";
+            DESCCargo.ReadOnly = true;
             // 
-            // btnAlterarCargo
+            // IDDepart
             // 
-            btnAlterarCargo.BackColor = Color.MediumTurquoise;
-            btnAlterarCargo.Location = new Point(96, 466);
-            btnAlterarCargo.Name = "btnAlterarCargo";
-            btnAlterarCargo.Size = new Size(75, 31);
-            btnAlterarCargo.TabIndex = 67;
-            btnAlterarCargo.Text = "Alterar";
-            btnAlterarCargo.UseVisualStyleBackColor = false;
+            IDDepart.DataPropertyName = "Id1";
+            IDDepart.HeaderText = "ID";
+            IDDepart.Name = "IDDepart";
+            IDDepart.ReadOnly = true;
             // 
-            // btnExcluirCargo
+            // DESCDepart
             // 
-            btnExcluirCargo.BackColor = Color.MediumTurquoise;
-            btnExcluirCargo.Location = new Point(258, 466);
-            btnExcluirCargo.Name = "btnExcluirCargo";
-            btnExcluirCargo.Size = new Size(75, 31);
-            btnExcluirCargo.TabIndex = 68;
-            btnExcluirCargo.Text = "Excluir";
-            btnExcluirCargo.UseVisualStyleBackColor = false;
-            // 
-            // btnLimparCargo
-            // 
-            btnLimparCargo.BackColor = Color.MediumTurquoise;
-            btnLimparCargo.Location = new Point(403, 466);
-            btnLimparCargo.Name = "btnLimparCargo";
-            btnLimparCargo.Size = new Size(75, 31);
-            btnLimparCargo.TabIndex = 69;
-            btnLimparCargo.Text = "Limpar";
-            btnLimparCargo.UseVisualStyleBackColor = false;
+            DESCDepart.DataPropertyName = "Descricao";
+            DESCDepart.HeaderText = "Descrição";
+            DESCDepart.Name = "DESCDepart";
+            DESCDepart.ReadOnly = true;
             // 
             // frmConCargoDepart
             // 
@@ -407,17 +421,13 @@
         private TextBox txtDescDepart;
         private Label label6;
         private TextBox txtIDDepart;
-        private Button button3;
+        private Button btnAlterarDep;
         private Label label2;
-        private Button button2;
+        private Button btnExcluirDep;
         private Label label3;
-        private Button button1;
+        private Button btnLimparDep;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn IDCargo;
-        private DataGridViewTextBoxColumn DESCCargo;
         private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn IDDepart;
-        private DataGridViewTextBoxColumn DESCDepart;
         private TextBox txtPesqCargo;
         private Label label18;
         private TextBox txtPesqDepart;
@@ -427,5 +437,9 @@
         private Button btnExcluirCargo;
         private Button btnLimparCargo;
         private TextBox txtIDCargo;
+        private DataGridViewTextBoxColumn IDCargo;
+        private DataGridViewTextBoxColumn DESCCargo;
+        private DataGridViewTextBoxColumn IDDepart;
+        private DataGridViewTextBoxColumn DESCDepart;
     }
 }

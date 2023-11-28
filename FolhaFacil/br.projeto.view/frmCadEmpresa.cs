@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FolhaFacil.br.projeto.controller;
+using FolhaFacil.br.projeto.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +26,25 @@ namespace FolhaFacil.br.projeto.view
 
         private void btnCad_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                Empresa obj = new Empresa();
+                obj.Nome = txtNome.Text;
+                obj.CNPJ = txtCNPJ.Text;
+                obj.Endereco = txtEnd.Text;
+                obj.Tel = txtTel.Text;
+
+                EmpresaController dao = new EmpresaController();
+                dao.cadastrar(obj);
+                MessageBox.Show("Empresa cadastrada com sucesso!");
+                Consistencia.limparcampos2(panel1);
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("ERRO" + erro);
+            }
         }
     }
 }

@@ -35,23 +35,23 @@
             menuStrip1 = new MenuStrip();
             voltarToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
-            panel2 = new Panel();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            txtIDAcres = new TextBox();
-            txtDescAcresc = new TextBox();
-            txtValorAcresc = new TextBox();
-            label4 = new Label();
             btnCadAcresc = new Button();
+            label4 = new Label();
+            txtValorAcresc = new TextBox();
+            txtDescAcresc = new TextBox();
+            txtIDAcres = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            panel2 = new Panel();
             btnCadDesc = new Button();
             label5 = new Label();
-            txtValorDesc = new TextBox();
-            txtDescDesc = new TextBox();
-            txtIDDesc = new TextBox();
-            label6 = new Label();
-            label7 = new Label();
             label8 = new Label();
+            txtValorDesc = new TextBox();
+            label7 = new Label();
+            txtDescDesc = new TextBox();
+            label6 = new Label();
+            txtIDDesc = new TextBox();
             statusStrip1.SuspendLayout();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
@@ -117,6 +117,76 @@
             panel1.Size = new Size(493, 532);
             panel1.TabIndex = 8;
             // 
+            // btnCadAcresc
+            // 
+            btnCadAcresc.BackColor = Color.MediumTurquoise;
+            btnCadAcresc.Location = new Point(185, 358);
+            btnCadAcresc.Name = "btnCadAcresc";
+            btnCadAcresc.Size = new Size(116, 42);
+            btnCadAcresc.TabIndex = 7;
+            btnCadAcresc.Text = "Cadastrar";
+            btnCadAcresc.UseVisualStyleBackColor = false;
+            btnCadAcresc.Click += btnCadAcresc_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(102, 143);
+            label4.Name = "label4";
+            label4.Size = new Size(305, 32);
+            label4.TabIndex = 6;
+            label4.Text = "Cadastrar Acréscimos";
+            // 
+            // txtValorAcresc
+            // 
+            txtValorAcresc.Location = new Point(185, 292);
+            txtValorAcresc.Name = "txtValorAcresc";
+            txtValorAcresc.Size = new Size(100, 27);
+            txtValorAcresc.TabIndex = 5;
+            // 
+            // txtDescAcresc
+            // 
+            txtDescAcresc.Location = new Point(185, 249);
+            txtDescAcresc.Name = "txtDescAcresc";
+            txtDescAcresc.Size = new Size(224, 27);
+            txtDescAcresc.TabIndex = 4;
+            // 
+            // txtIDAcres
+            // 
+            txtIDAcres.Location = new Point(185, 208);
+            txtIDAcres.Name = "txtIDAcres";
+            txtIDAcres.ReadOnly = true;
+            txtIDAcres.Size = new Size(100, 27);
+            txtIDAcres.TabIndex = 3;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(125, 298);
+            label3.Name = "label3";
+            label3.Size = new Size(54, 21);
+            label3.TabIndex = 2;
+            label3.Text = "Valor:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(88, 255);
+            label2.Name = "label2";
+            label2.Size = new Size(91, 21);
+            label2.TabIndex = 1;
+            label2.Text = "Descrição:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(148, 214);
+            label1.Name = "label1";
+            label1.Size = new Size(31, 21);
+            label1.TabIndex = 0;
+            label1.Text = "ID:";
+            // 
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlLightLight;
@@ -133,75 +203,6 @@
             panel2.Size = new Size(493, 532);
             panel2.TabIndex = 9;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(148, 214);
-            label1.Name = "label1";
-            label1.Size = new Size(31, 21);
-            label1.TabIndex = 0;
-            label1.Text = "ID:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(88, 255);
-            label2.Name = "label2";
-            label2.Size = new Size(91, 21);
-            label2.TabIndex = 1;
-            label2.Text = "Descrição:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(125, 298);
-            label3.Name = "label3";
-            label3.Size = new Size(54, 21);
-            label3.TabIndex = 2;
-            label3.Text = "Valor:";
-            // 
-            // txtIDAcres
-            // 
-            txtIDAcres.Location = new Point(185, 208);
-            txtIDAcres.Name = "txtIDAcres";
-            txtIDAcres.ReadOnly = true;
-            txtIDAcres.Size = new Size(100, 27);
-            txtIDAcres.TabIndex = 3;
-            // 
-            // txtDescAcresc
-            // 
-            txtDescAcresc.Location = new Point(185, 249);
-            txtDescAcresc.Name = "txtDescAcresc";
-            txtDescAcresc.Size = new Size(224, 27);
-            txtDescAcresc.TabIndex = 4;
-            // 
-            // txtValorAcresc
-            // 
-            txtValorAcresc.Location = new Point(185, 292);
-            txtValorAcresc.Name = "txtValorAcresc";
-            txtValorAcresc.Size = new Size(100, 27);
-            txtValorAcresc.TabIndex = 5;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(102, 143);
-            label4.Name = "label4";
-            label4.Size = new Size(305, 32);
-            label4.TabIndex = 6;
-            label4.Text = "Cadastrar Acréscimos";
-            // 
-            // btnCadAcresc
-            // 
-            btnCadAcresc.BackColor = Color.MediumTurquoise;
-            btnCadAcresc.Location = new Point(185, 358);
-            btnCadAcresc.Name = "btnCadAcresc";
-            btnCadAcresc.Size = new Size(116, 42);
-            btnCadAcresc.TabIndex = 7;
-            btnCadAcresc.Text = "Cadastrar";
-            btnCadAcresc.UseVisualStyleBackColor = false;
-            // 
             // btnCadDesc
             // 
             btnCadDesc.BackColor = Color.MediumTurquoise;
@@ -211,6 +212,7 @@
             btnCadDesc.TabIndex = 15;
             btnCadDesc.Text = "Cadastrar";
             btnCadDesc.UseVisualStyleBackColor = false;
+            btnCadDesc.Click += btnCadDesc_Click;
             // 
             // label5
             // 
@@ -222,36 +224,21 @@
             label5.TabIndex = 14;
             label5.Text = "Cadastrar Descontos";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(140, 214);
+            label8.Name = "label8";
+            label8.Size = new Size(31, 21);
+            label8.TabIndex = 8;
+            label8.Text = "ID:";
+            // 
             // txtValorDesc
             // 
             txtValorDesc.Location = new Point(177, 292);
             txtValorDesc.Name = "txtValorDesc";
             txtValorDesc.Size = new Size(100, 27);
             txtValorDesc.TabIndex = 13;
-            // 
-            // txtDescDesc
-            // 
-            txtDescDesc.Location = new Point(177, 249);
-            txtDescDesc.Name = "txtDescDesc";
-            txtDescDesc.Size = new Size(224, 27);
-            txtDescDesc.TabIndex = 12;
-            // 
-            // txtIDDesc
-            // 
-            txtIDDesc.Location = new Point(177, 208);
-            txtIDDesc.Name = "txtIDDesc";
-            txtIDDesc.ReadOnly = true;
-            txtIDDesc.Size = new Size(100, 27);
-            txtIDDesc.TabIndex = 11;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(117, 298);
-            label6.Name = "label6";
-            label6.Size = new Size(54, 21);
-            label6.TabIndex = 10;
-            label6.Text = "Valor:";
             // 
             // label7
             // 
@@ -262,14 +249,29 @@
             label7.TabIndex = 9;
             label7.Text = "Descrição:";
             // 
-            // label8
+            // txtDescDesc
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(140, 214);
-            label8.Name = "label8";
-            label8.Size = new Size(31, 21);
-            label8.TabIndex = 8;
-            label8.Text = "ID:";
+            txtDescDesc.Location = new Point(177, 249);
+            txtDescDesc.Name = "txtDescDesc";
+            txtDescDesc.Size = new Size(224, 27);
+            txtDescDesc.TabIndex = 12;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(117, 298);
+            label6.Name = "label6";
+            label6.Size = new Size(54, 21);
+            label6.TabIndex = 10;
+            label6.Text = "Valor:";
+            // 
+            // txtIDDesc
+            // 
+            txtIDDesc.Location = new Point(177, 208);
+            txtIDDesc.Name = "txtIDDesc";
+            txtIDDesc.ReadOnly = true;
+            txtIDDesc.Size = new Size(100, 27);
+            txtIDDesc.TabIndex = 11;
             // 
             // frmCadItensRH
             // 
@@ -283,7 +285,7 @@
             Controls.Add(menuStrip1);
             Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "frmCadItensRH";
             Text = "frmCadItensRH";
             statusStrip1.ResumeLayout(false);

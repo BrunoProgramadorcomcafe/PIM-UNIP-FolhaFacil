@@ -35,13 +35,13 @@
             menuStrip1 = new MenuStrip();
             voltarToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
-            panel2 = new Panel();
             btnCadCargo = new Button();
             label4 = new Label();
             txtDescCargo = new TextBox();
             txtIDCargo = new TextBox();
             label2 = new Label();
             label1 = new Label();
+            panel2 = new Panel();
             btnCadDep = new Button();
             label3 = new Label();
             txtDescDep = new TextBox();
@@ -111,20 +111,6 @@
             panel1.Size = new Size(493, 532);
             panel1.TabIndex = 10;
             // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.ControlLightLight;
-            panel2.Controls.Add(btnCadDep);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(txtDescDep);
-            panel2.Controls.Add(txtIDDep);
-            panel2.Controls.Add(label5);
-            panel2.Controls.Add(label6);
-            panel2.Location = new Point(511, 32);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(493, 532);
-            panel2.TabIndex = 11;
-            // 
             // btnCadCargo
             // 
             btnCadCargo.BackColor = Color.MediumTurquoise;
@@ -134,6 +120,7 @@
             btnCadCargo.TabIndex = 15;
             btnCadCargo.Text = "Cadastrar";
             btnCadCargo.UseVisualStyleBackColor = false;
+            btnCadCargo.Click += btnCadCargo_Click;
             // 
             // label4
             // 
@@ -178,6 +165,20 @@
             label1.TabIndex = 8;
             label1.Text = "ID:";
             // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ControlLightLight;
+            panel2.Controls.Add(btnCadDep);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(txtDescDep);
+            panel2.Controls.Add(txtIDDep);
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(label6);
+            panel2.Location = new Point(511, 32);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(493, 532);
+            panel2.TabIndex = 11;
+            // 
             // btnCadDep
             // 
             btnCadDep.BackColor = Color.MediumTurquoise;
@@ -187,6 +188,7 @@
             btnCadDep.TabIndex = 21;
             btnCadDep.Text = "Cadastrar";
             btnCadDep.UseVisualStyleBackColor = false;
+            btnCadDep.Click += btnCadDep_Click;
             // 
             // label3
             // 
@@ -243,7 +245,7 @@
             Controls.Add(menuStrip1);
             Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "frmCadCargoDepart";
             Text = "frmCadCargoDepart";
             statusStrip1.ResumeLayout(false);

@@ -129,5 +129,42 @@ namespace FolhaFacil.br.projeto.controller
         }
 
         #endregion
+
+        public ColecaoEmpresa SelecionarEspecifico(Empresa empresa)
+        {
+            ConexaoController conexaoc = new ConexaoController();
+            try
+            {
+
+                ColecaoEmpresa colecaoempresa = new ColecaoEmpresa();
+                String comando = "Select * from TB_EMPRESA where TB_EMPRESA_NOME like '%" + empresa.Nome + "%'";
+
+                conexaoc.LimparParametros();
+
+                DataTable dt = conexaoc.ConsultarRegistro(comando);
+
+                foreach (DataRow linha in dt.Rows)
+                {
+
+                    empresa.Id1 = Convert.ToInt32(linha["TB_EMPRESA_ID"]);
+                    empresa.Nome = linha["TB_EMPRESA_NOME"].ToString();
+                    empresa.CNPJ = linha["TB_EMPRESA_CNPJ"].ToString();
+                    empresa.Endereco = linha["TB_EMPRESA_ENDERECO"].ToString();
+                    empresa.Tel = linha["TB_EMPRESA_TEL"].ToString();
+
+                    colecaoempresa.Add(empresa);
+
+                }
+
+                return colecaoempresa;
+
+            }
+            catch (Exception erro)
+            {
+
+                throw erro;
+
+            }
+        }
     }
 }
