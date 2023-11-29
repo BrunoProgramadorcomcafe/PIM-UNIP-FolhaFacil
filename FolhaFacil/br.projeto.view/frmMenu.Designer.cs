@@ -278,8 +278,9 @@
             Controls.Add(pictureBox1);
             Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
             Name = "frmMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu Principal";

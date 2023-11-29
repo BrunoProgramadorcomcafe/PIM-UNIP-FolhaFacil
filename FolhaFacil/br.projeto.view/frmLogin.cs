@@ -60,8 +60,10 @@ namespace FolhaFacil.br.projeto.view
             {
                 MessageBox.Show("Bem vindo ao Folha Fácil!- Sr(a) "
                     + funcionarioretorno.Nome);
+
                 frmMenu tela = new frmMenu();
                 tela.lblLogado.Text = funcionarioretorno.Nome.ToString();
+
                 retorno = true;
                 this.Visible = false;
                 tela.Show();
@@ -75,6 +77,12 @@ namespace FolhaFacil.br.projeto.view
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+        }
+
+        private void btnManualUsuario_Click(object sender, EventArgs e)
+        {
+            frmManual tela = new frmManual();
+            tela.Show();
         }
     }
 }

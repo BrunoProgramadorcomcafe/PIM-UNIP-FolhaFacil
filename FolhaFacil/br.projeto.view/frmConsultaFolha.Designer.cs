@@ -48,13 +48,9 @@
             panel2 = new Panel();
             label2 = new Label();
             txtPesqFun = new TextBox();
-            statusStrip1 = new StatusStrip();
-            toolStripStatusLabel1 = new ToolStripStatusLabel();
-            lblLogado = new ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)tbFolha).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // tbFolha
@@ -239,39 +235,12 @@
             txtPesqFun.TabIndex = 2;
             txtPesqFun.TextChanged += txtPesqFun_TextChanged;
             // 
-            // statusStrip1
-            // 
-            statusStrip1.BackColor = SystemColors.ControlLightLight;
-            statusStrip1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, lblLogado });
-            statusStrip1.Location = new Point(0, 617);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Padding = new Padding(1, 0, 20, 0);
-            statusStrip1.Size = new Size(766, 22);
-            statusStrip1.TabIndex = 9;
-            statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            toolStripStatusLabel1.BackColor = SystemColors.ControlLightLight;
-            toolStripStatusLabel1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(92, 17);
-            toolStripStatusLabel1.Text = "Logado com:";
-            // 
-            // lblLogado
-            // 
-            lblLogado.Name = "lblLogado";
-            lblLogado.Size = new Size(141, 17);
-            lblLogado.Text = "toolStripStatusLabel2";
-            // 
             // frmConsultaFolha
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumTurquoise;
-            ClientSize = new Size(766, 639);
-            Controls.Add(statusStrip1);
+            ClientSize = new Size(766, 629);
             Controls.Add(panel1);
             Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -282,10 +251,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            statusStrip1.ResumeLayout(false);
-            statusStrip1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -315,9 +281,6 @@
         private Label label3;
         private Label label15;
         private TextBox txtId;
-        private StatusStrip statusStrip1;
-        private ToolStripStatusLabel toolStripStatusLabel1;
-        private ToolStripStatusLabel lblLogado;
         private TextBox textBox8;
         private TextBox textBox7;
         private TextBox textBox6;

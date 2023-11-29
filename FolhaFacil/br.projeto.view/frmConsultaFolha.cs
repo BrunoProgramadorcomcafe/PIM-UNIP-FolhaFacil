@@ -106,7 +106,7 @@ namespace FolhaFacil.br.projeto.view
                     obj.Id1 = int.Parse(txtId.Text);
                     FolhaController dao = new FolhaController();
                     dao.excluirfolha(obj);
-                  
+
                     MessageBox.Show("Excluido com sucesso!");
                     tbFolha.DataSource = dao.SelecionarFolha();
                 }

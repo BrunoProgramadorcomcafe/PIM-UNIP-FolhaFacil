@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            statusStrip1 = new StatusStrip();
-            toolStripStatusLabel1 = new ToolStripStatusLabel();
-            lblLogado = new ToolStripStatusLabel();
             panel1 = new Panel();
             txtPesqAcresc = new TextBox();
             label18 = new Label();
             dataGridView1 = new DataGridView();
+            idAcresc = new DataGridViewTextBoxColumn();
+            DESCAcresc = new DataGridViewTextBoxColumn();
+            VALORAcresc = new DataGridViewTextBoxColumn();
             txtValorAcresc = new TextBox();
             txtDescAcresc = new TextBox();
             txtIDAcres = new TextBox();
@@ -49,6 +49,9 @@
             txtPesqDesc = new TextBox();
             label9 = new Label();
             dataGridView2 = new DataGridView();
+            IDDesc = new DataGridViewTextBoxColumn();
+            DESCDesc = new DataGridViewTextBoxColumn();
+            VALORDesc = new DataGridViewTextBoxColumn();
             label8 = new Label();
             txtValorDesc = new TextBox();
             label7 = new Label();
@@ -59,44 +62,11 @@
             btnLimparDesc = new Button();
             btnExcluirDesc = new Button();
             btnAlterarDesc = new Button();
-            idAcresc = new DataGridViewTextBoxColumn();
-            DESCAcresc = new DataGridViewTextBoxColumn();
-            VALORAcresc = new DataGridViewTextBoxColumn();
-            IDDesc = new DataGridViewTextBoxColumn();
-            DESCDesc = new DataGridViewTextBoxColumn();
-            VALORDesc = new DataGridViewTextBoxColumn();
-            statusStrip1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
-            // 
-            // statusStrip1
-            // 
-            statusStrip1.BackColor = SystemColors.ControlLightLight;
-            statusStrip1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, lblLogado });
-            statusStrip1.Location = new Point(0, 531);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Padding = new Padding(1, 0, 20, 0);
-            statusStrip1.Size = new Size(1137, 22);
-            statusStrip1.TabIndex = 7;
-            statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            toolStripStatusLabel1.BackColor = SystemColors.ControlLightLight;
-            toolStripStatusLabel1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(92, 17);
-            toolStripStatusLabel1.Text = "Logado com:";
-            // 
-            // lblLogado
-            // 
-            lblLogado.Name = "lblLogado";
-            lblLogado.Size = new Size(141, 17);
-            lblLogado.Text = "toolStripStatusLabel2";
             // 
             // panel1
             // 
@@ -152,6 +122,27 @@
             dataGridView1.Size = new Size(344, 168);
             dataGridView1.TabIndex = 51;
             dataGridView1.CellClick += dataGridView1_CellClick;
+            // 
+            // idAcresc
+            // 
+            idAcresc.DataPropertyName = "Id1";
+            idAcresc.HeaderText = "ID";
+            idAcresc.Name = "idAcresc";
+            idAcresc.ReadOnly = true;
+            // 
+            // DESCAcresc
+            // 
+            DESCAcresc.DataPropertyName = "Descricao";
+            DESCAcresc.HeaderText = "Descrição";
+            DESCAcresc.Name = "DESCAcresc";
+            DESCAcresc.ReadOnly = true;
+            // 
+            // VALORAcresc
+            // 
+            VALORAcresc.DataPropertyName = "Valor";
+            VALORAcresc.HeaderText = "Valor";
+            VALORAcresc.Name = "VALORAcresc";
+            VALORAcresc.ReadOnly = true;
             // 
             // txtValorAcresc
             // 
@@ -300,6 +291,27 @@
             dataGridView2.TabIndex = 53;
             dataGridView2.CellClick += dataGridView2_CellClick;
             // 
+            // IDDesc
+            // 
+            IDDesc.DataPropertyName = "Id1";
+            IDDesc.HeaderText = "ID";
+            IDDesc.Name = "IDDesc";
+            IDDesc.ReadOnly = true;
+            // 
+            // DESCDesc
+            // 
+            DESCDesc.DataPropertyName = "Descricao";
+            DESCDesc.HeaderText = "Descrição";
+            DESCDesc.Name = "DESCDesc";
+            DESCDesc.ReadOnly = true;
+            // 
+            // VALORDesc
+            // 
+            VALORDesc.DataPropertyName = "Valor";
+            VALORDesc.HeaderText = "Valor";
+            VALORDesc.Name = "VALORDesc";
+            VALORDesc.ReadOnly = true;
+            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -392,63 +404,20 @@
             btnAlterarDesc.UseVisualStyleBackColor = false;
             btnAlterarDesc.Click += btnAlterarDesc_Click;
             // 
-            // idAcresc
-            // 
-            idAcresc.DataPropertyName = "Id1";
-            idAcresc.HeaderText = "ID";
-            idAcresc.Name = "idAcresc";
-            idAcresc.ReadOnly = true;
-            // 
-            // DESCAcresc
-            // 
-            DESCAcresc.DataPropertyName = "Descricao";
-            DESCAcresc.HeaderText = "Descrição";
-            DESCAcresc.Name = "DESCAcresc";
-            DESCAcresc.ReadOnly = true;
-            // 
-            // VALORAcresc
-            // 
-            VALORAcresc.DataPropertyName = "Valor";
-            VALORAcresc.HeaderText = "Valor";
-            VALORAcresc.Name = "VALORAcresc";
-            VALORAcresc.ReadOnly = true;
-            // 
-            // IDDesc
-            // 
-            IDDesc.DataPropertyName = "Id1";
-            IDDesc.HeaderText = "ID";
-            IDDesc.Name = "IDDesc";
-            IDDesc.ReadOnly = true;
-            // 
-            // DESCDesc
-            // 
-            DESCDesc.DataPropertyName = "Descricao";
-            DESCDesc.HeaderText = "Descrição";
-            DESCDesc.Name = "DESCDesc";
-            DESCDesc.ReadOnly = true;
-            // 
-            // VALORDesc
-            // 
-            VALORDesc.DataPropertyName = "Valor";
-            VALORDesc.HeaderText = "Valor";
-            VALORDesc.Name = "VALORDesc";
-            VALORDesc.ReadOnly = true;
-            // 
             // frmConItensRH
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumTurquoise;
-            ClientSize = new Size(1137, 553);
+            ClientSize = new Size(1137, 535);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(statusStrip1);
             Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4);
+            MaximizeBox = false;
             Name = "frmConItensRH";
             Text = "Consulta Itens RH";
-            statusStrip1.ResumeLayout(false);
-            statusStrip1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -456,14 +425,9 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private StatusStrip statusStrip1;
-        private ToolStripStatusLabel toolStripStatusLabel1;
-        private ToolStripStatusLabel lblLogado;
         private Panel panel1;
         private Panel panel2;
         private Button btnLimparAcresc;

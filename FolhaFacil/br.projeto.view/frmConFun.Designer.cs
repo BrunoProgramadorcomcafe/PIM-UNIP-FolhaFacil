@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConFun));
-            statusStrip1 = new StatusStrip();
-            toolStripStatusLabel1 = new ToolStripStatusLabel();
-            lblLogado = new ToolStripStatusLabel();
             panel1 = new Panel();
             txtEmail = new TextBox();
             label19 = new Label();
@@ -93,37 +90,11 @@
             DATACONTRATO = new DataGridViewTextBoxColumn();
             SENHA = new DataGridViewTextBoxColumn();
             EMAIL = new DataGridViewTextBoxColumn();
-            statusStrip1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // statusStrip1
-            // 
-            statusStrip1.BackColor = SystemColors.ControlLightLight;
-            statusStrip1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, lblLogado });
-            statusStrip1.Location = new Point(0, 531);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(1137, 22);
-            statusStrip1.TabIndex = 6;
-            statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            toolStripStatusLabel1.BackColor = SystemColors.ControlLightLight;
-            toolStripStatusLabel1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(92, 17);
-            toolStripStatusLabel1.Text = "Logado com:";
-            // 
-            // lblLogado
-            // 
-            lblLogado.Name = "lblLogado";
-            lblLogado.Size = new Size(141, 17);
-            lblLogado.Text = "toolStripStatusLabel2";
             // 
             // panel1
             // 
@@ -702,16 +673,15 @@
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumTurquoise;
-            ClientSize = new Size(1137, 553);
+            ClientSize = new Size(1137, 524);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(statusStrip1);
             Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4);
+            MaximizeBox = false;
             Name = "frmConFun";
             Text = "Consulta de Funcionário";
-            statusStrip1.ResumeLayout(false);
-            statusStrip1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -719,14 +689,9 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private StatusStrip statusStrip1;
-        private ToolStripStatusLabel toolStripStatusLabel1;
-        private ToolStripStatusLabel lblLogado;
         private Panel panel1;
         private DateTimePicker dateContrato;
         private TextBox txtTel;

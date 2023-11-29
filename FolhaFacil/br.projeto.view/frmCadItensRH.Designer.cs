@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadItensRH));
-            statusStrip1 = new StatusStrip();
-            toolStripStatusLabel1 = new ToolStripStatusLabel();
-            lblLogado = new ToolStripStatusLabel();
             menuStrip1 = new MenuStrip();
             voltarToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
@@ -52,36 +49,10 @@
             txtDescDesc = new TextBox();
             label6 = new Label();
             txtIDDesc = new TextBox();
-            statusStrip1.SuspendLayout();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // statusStrip1
-            // 
-            statusStrip1.BackColor = SystemColors.ControlLightLight;
-            statusStrip1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, lblLogado });
-            statusStrip1.Location = new Point(0, 567);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(1017, 22);
-            statusStrip1.TabIndex = 7;
-            statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            toolStripStatusLabel1.BackColor = SystemColors.ControlLightLight;
-            toolStripStatusLabel1.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(92, 17);
-            toolStripStatusLabel1.Text = "Logado com:";
-            // 
-            // lblLogado
-            // 
-            lblLogado.Name = "lblLogado";
-            lblLogado.Size = new Size(141, 17);
-            lblLogado.Text = "toolStripStatusLabel2";
             // 
             // menuStrip1
             // 
@@ -278,18 +249,15 @@
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumTurquoise;
-            ClientSize = new Size(1017, 589);
+            ClientSize = new Size(1017, 572);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
             Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "frmCadItensRH";
             Text = "frmCadItensRH";
-            statusStrip1.ResumeLayout(false);
-            statusStrip1.PerformLayout();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
@@ -301,10 +269,6 @@
         }
 
         #endregion
-
-        private StatusStrip statusStrip1;
-        private ToolStripStatusLabel toolStripStatusLabel1;
-        private ToolStripStatusLabel lblLogado;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem voltarToolStripMenuItem;
         private Panel panel1;

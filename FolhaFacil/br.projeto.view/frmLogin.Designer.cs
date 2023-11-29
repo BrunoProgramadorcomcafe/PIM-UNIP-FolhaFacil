@@ -322,6 +322,7 @@
             btnManualUsuario.TabIndex = 4;
             btnManualUsuario.Text = "Manual";
             btnManualUsuario.UseVisualStyleBackColor = true;
+            btnManualUsuario.Click += btnManualUsuario_Click;
             // 
             // label9
             // 
